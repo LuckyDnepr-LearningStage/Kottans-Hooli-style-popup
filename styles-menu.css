@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     width: 90%;
     height: 100%;
     margin: 0px;
@@ -15,31 +16,21 @@ a {
 }
 
 /*Menu button styles start*/
-
 #nav_keeper_input {
-    position: absolute;
-    display: block;
-    height: 50px;
-    width: 55px;
-    top: 12px;
-    left: 15px;
-    z-index: 5;
-    opacity: 0;
-    cursor: pointer;
-    padding: 5px;
+    appearance: none;
 }
 
 .nav_keeper_lines {
-  height: 26px;
-  width: 32px;
-  position: absolute;
-  top: 17px;
-  left: 20px;
-  z-index: 2;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .nav_keeper_line {
@@ -53,25 +44,25 @@ a {
 .nav_keeper_lines .line1 {
     transform-origin: 0% 0%;
     transition: transform 0.4s ease-in-out;
-  }
-  
+}
+
 .nav_keeper_lines .line2 {
     transition: transform 0.2s ease-in-out;
-  }
-  
+}
+
 .nav_keeper_lines .line3 {
     transform-origin: 0% 100%;
     transition: transform 0.4s ease-in-out;
-  }
+}
 
-#nav_keeper_input:focus + .nav_keeper_lines {
-    border:1px solid rgb(250, 128, 114);
+#nav_keeper_input:focus+.nav_keeper_lines {
+    border: 1px solid rgb(250, 128, 114);
     border-radius: 5px;
     box-shadow: 5px 5px 5px grey;
 }
 
 /*Menu button styles end*/
-  
+
 
 .nav {
     display: flex;
@@ -95,8 +86,8 @@ a {
     margin: 0;
     width: 90%;
     height: 250px;
-    overflow-y:hidden;
-    align-self:center;
+    overflow-y: hidden;
+    align-self: center;
     gap: 5px;
     display: grid;
     grid-template-rows: repeat(4, 3.5em);
@@ -121,8 +112,8 @@ a {
     margin: 2px 0;
     background-image: linear-gradient(white 90%, salmon 100%);
     transition: text-shadow linear 200ms;
-    
-    
+
+
 }
 
 .show_more_item {
@@ -154,7 +145,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
 }
 
 .menu_show_more {
@@ -175,16 +166,16 @@ a {
     appearance: none;
 }
 
-#menu_show_more_input:focus + label > span {
+#menu_show_more_input:focus+label>span {
     font-weight: bold;
 }
 
 /*Change "Show more" to "Show less" start*/
-#menu_show_more_input:checked ~ .nav_menu {
-    overflow-y:scroll;
+#menu_show_more_input:checked~.nav_menu {
+    overflow-y: scroll;
 }
 
-#menu_show_more_input:checked ~ .nav_menu > .show_more_item {
+#menu_show_more_input:checked~.nav_menu>.show_more_item {
     display: block;
 }
 
@@ -192,57 +183,58 @@ a {
     display: none;
 }
 
-#menu_show_more_input:checked + label > .show_more_span{
+#menu_show_more_input:checked+label>.show_more_span {
     display: none;
 }
 
-#menu_show_more_input:checked + label > .show_less_span{
+#menu_show_more_input:checked+label>.show_less_span {
     display: block;
 }
+
 /*Change "Show more" to "Show less" end*/
 
 
-#nav_keeper_input:checked ~ .nav {
+#nav_keeper_input:checked~.nav {
     transform: translateX(0);
-  }
-  
+}
+
 
 /*Animate Menu Button start*/
-#nav_keeper_input:checked ~ .nav_keeper_lines > .line1 {
-transform: rotate(45deg) translateY(-4px) translateX(4px);
+#nav_keeper_input:checked~.nav_keeper_lines>.line1 {
+    transform: rotate(45deg) translateY(-4px) translateX(4px);
 }
 
-#nav_keeper_input:checked ~ .nav_keeper_lines > .line2 {
-transform: scaleY(0);
+#nav_keeper_input:checked~.nav_keeper_lines>.line2 {
+    transform: scaleY(0);
 }
 
-#nav_keeper_input:checked ~ .nav_keeper_lines > .line3 {
-transform: rotate(-45deg) translateY(4px) translateX(4px);
+#nav_keeper_input:checked~.nav_keeper_lines>.line3 {
+    transform: rotate(-45deg) translateY(4px) translateX(4px);
 }
+
 /*Animate Menu Button end*/
 
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1200px) {
     .nav {
         width: 40%;
     }
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) {
     .nav {
         width: 50%;
     }
 }
 
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 720px) {
     .nav {
         width: 50%;
     }
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
     .nav {
         width: 100%;
     }
 }
-
